@@ -2,7 +2,8 @@ pt-BR:
   activerecord:
     attributes:
       user:
-        name: Nome
-        email: E-Mail
-        password: Senha
-        password_confirmation: Confirmar sua senha
+        name: "Nome"
+        email: "E-Mail"
+        password: "Senha"
+        password_confirmation: "Confirmar sua senha"
+        remember_me: "Lembrar minha senha"

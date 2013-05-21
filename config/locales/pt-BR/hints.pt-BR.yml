@@ -1,0 +1,4 @@
+pt-BR:
+  hints:
+    leave_it_blank: "deixe em branco se você não quiser alterar"
+    need_current_password: "nós precisamos de sua senha atual para confirmar a mudança"

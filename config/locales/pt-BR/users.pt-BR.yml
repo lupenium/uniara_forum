@@ -3,14 +3,38 @@ pt-BR:
     resend_instructions: "Enviar novamente instruções de confirmação"
     passwords:
       change_password_title: "Alterar sua senha"
+
     mailer:
       confirmation_instructions:
         welcome: "Bem vindo, %{email}"
         confirm_message: "Você pode confirmar seu cadastro através do link abaixo:"
         confirm_account: "Confirmar meu cadastro"
+
       reset_password_instructions:
         hello_message: "Olá %{email}"
         request_link_change_message: "Someone has requested a link to change your password. You can do this through the link below"
         change_password: "Alterar senha"
         ignore_message: "Se você não solicitou isto, por favor ignore este email."
         change_message: "Sua senha não será alterada enquanto você não acessar o link e criar uma nova."
+        new_password: "Nova senha"
+        password_confirmation: "Confirme sua senha"
+
+    passwords:
+      edit:
+
+      new:
+        forgot_password: "Esqueceu sua senha?"
+        send_me_instructions: "Enviar instruções para resetar a senha"
+        didnt_receive: "Não recebeu as instruções de confirmação?"
+
+    registrations:
+      edit:
+        edit_header: "Editar %{user}"
+        waiting_confirmation: "Aguardando confirmação de email para: %{email}"
+      new:
+        sign_up: "Registar"
+
+    sessions:
+      new:
+        sign_in: "Entrar"
+
