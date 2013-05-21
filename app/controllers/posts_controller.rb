@@ -1,4 +1,3 @@
-class PostsController < ApplicationController
 
   before_filter :authenticate_user!
 
@@ -35,7 +34,6 @@ class PostsController < ApplicationController
   end
 
   def update
-    binding.pry
   	@post = Post.find(params[:id])
 
   	if @post.update_attributes(params[:post])
