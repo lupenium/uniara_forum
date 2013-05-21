@@ -1,9 +1,24 @@
 pt-BR:
   activerecord:
     attributes:
+      default: &names_defaults
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        title: Título
+        content: Conteúdo
       user:
+        <<: *names_defaults
         name: "Nome"
         email: "E-Mail"
         password: "Senha"
         password_confirmation: "Confirmar sua senha"
         remember_me: "Lembrar minha senha"
+      category:
+        <<: *names_defaults
+      post:
+        <<: *names_defaults
+    models:
+      category: Categoria
+      post: Tópico
+      reply: Resposta
+      user: Usuário
