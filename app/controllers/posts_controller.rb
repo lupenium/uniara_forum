@@ -37,7 +37,6 @@ class PostsController < ApplicationController
   	if @post.update_attributes(params[:post])
   		redirect_to posts_path, notice: 'Post atualizado com sucesso !'
   	else
-      asd
   		render action: 'edit'
   	end
 

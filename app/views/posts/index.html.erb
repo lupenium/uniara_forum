@@ -20,7 +20,7 @@
         <td><%= link_to post.id, post_path(post) %></td>
         <td><%= post.title %></td>
         <td><%= raw truncate(post.content, length: 100) %></td>
-        <td><%= post.user %></td>
+        <td><%= post.user.name %></td>
         <td><%= post.category.title %></td>
         <td><%=l post.created_at %></td>
         <td>
