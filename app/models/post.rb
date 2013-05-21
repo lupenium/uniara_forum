@@ -7,4 +7,6 @@ class Post < ActiveRecord::Base
   #accepts_nested_attributes_for :replies
 
   validates_presence_of :category, :user, :title, :content
+
+  scope :recents, -> { order("created_at DESC") }
 end

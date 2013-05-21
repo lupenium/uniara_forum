@@ -2,3 +2,13 @@
  *= require_self
  *= require bootstrap_and_overrides
  */
+ h2 {
+  text-align: center;
+ }
+ footer {
+  margin-top: 20px;
+ }
+
+ .username {
+  padding: 5px;
+ }

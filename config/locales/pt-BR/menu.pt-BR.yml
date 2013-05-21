@@ -3,3 +3,5 @@ pt-BR:
     sign_up: "Cadastrar"
     sign_in: "Entrar"
     logout: "Sair"
+    posts: "Tópicos"
+    new_post: "Novo Tópico"
