@@ -1,0 +1,15 @@
+<p class="navbar-text pull-right">
+  <% if user_signed_in? %>
+    <span class="separator">
+      <%= link_to t("menu.logout"), destroy_user_session_path, method: :delete %>
+    </span>  
+  <% end %>
+  <% unless user_signed_in? %>
+    <span class="separator">
+      <%= link_to t("menu.sign_in"), new_user_session_path %>
+    </span>
+    <span class="separator">
+      <%= link_to t("menu.sign_up"), new_user_registration_path %>
+    </span>      
+  <% end %>
+</p>
