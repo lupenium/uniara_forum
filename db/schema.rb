@@ -11,6 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20130521004418) do
 
   create_table "categories", :force => true do |t|
@@ -43,6 +44,9 @@ ActiveRecord::Schema.define(:version => 20130521004418) do
 
   add_index "replies", ["post_id"], :name => "index_replies_on_post_id"
   add_index "replies", ["user_id"], :name => "index_replies_on_user_id"
+=======
+ActiveRecord::Schema.define(:version => 20130521005932) do
+>>>>>>> 36f1e7f2484d859c31b9ca706ce56cb96e04d0b2
 
   create_table "users", :force => true do |t|
     t.string   "name",                                   :null => false
@@ -61,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20130521004418) do
     t.datetime "confirmation_sent_at"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "unconfirmed_email"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true

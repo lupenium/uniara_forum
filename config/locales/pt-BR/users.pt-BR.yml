@@ -1,0 +1,16 @@
+pt-BR:
+  users:
+    resend_instructions: "Enviar novamente instruções de confirmação"
+    passwords:
+      change_password_title: "Alterar sua senha"
+    mailer:
+      confirmation_instructions:
+        welcome: "Bem vindo, %{email}"
+        confirm_message: "Você pode confirmar seu cadastro através do link abaixo:"
+        confirm_account: "Confirmar meu cadastro"
+      reset_password_instructions:
+        hello_message: "Olá %{email}"
+        request_link_change_message: "Someone has requested a link to change your password. You can do this through the link below"
+        change_password: "Alterar senha"
+        ignore_message: "Se você não solicitou isto, por favor ignore este email."
+        change_message: "Sua senha não será alterada enquanto você não acessar o link e criar uma nova."
