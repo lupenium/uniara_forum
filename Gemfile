@@ -5,6 +5,7 @@ gem "mysql2"
 gem "devise"
 gem "simple_form"
 gem "rails-i18n"
+gem "tinymce-rails"
 
 group :assets do
   gem "sass-rails",   "~> 3.2.3"
