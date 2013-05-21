@@ -12,13 +12,9 @@
   <dd><%= raw @post.content %></dd>
 </dl>
 
-<% if @post.replies %>
-  <%= render @post.replies %>
-<% end %>
+<%= render "post_replies", replies: @post.replies %>
 
-<%= simple_form_for @post do |f| %>
-  <%= f.simple_fields_for @post.replies.build do |p| %>
-    <%= p.input :content %>
-    <%= p.button :submit %>
-  <% end %>
+<%= simple_form_for [@post, @reply] do |f| %>
+  <%= f.input :content %>
+  <%= f.submit %>
 <% end %>

@@ -1,0 +1,6 @@
+pt-BR:
+  flash:
+    notice:
+      reply_success: "Resposta criada com suceso."
+    alert:
+      empty_reply: "Resposta não pode ficar em branco."

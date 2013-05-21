@@ -17,6 +17,7 @@ pt-BR:
         <<: *names_defaults
       post:
         <<: *names_defaults
+        category: Categoria
     models:
       category: Categoria
       post: Tópico

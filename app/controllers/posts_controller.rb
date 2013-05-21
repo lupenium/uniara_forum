@@ -12,6 +12,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @reply = Reply.new
+    @reply.user = current_user
   end
 
   def edit
@@ -26,12 +28,14 @@ class PostsController < ApplicationController
   	if @post.save
   		redirect_to posts_path, notice: 'Post criado com suceso.'
   	else
-  		redirect_to new_post_path, alert: 'Ocorreu um erro ao salvar o post.'
+      flash.now[:alert] = t("simple_form.error_notification.default_message")
+  		render :new
   	end
 
   end
 
   def update
+    binding.pry
   	@post = Post.find(params[:id])
 
   	if @post.update_attributes(params[:post])

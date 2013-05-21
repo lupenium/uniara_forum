@@ -20,11 +20,13 @@ class RepliesController < ApplicationController
 
   def create
   	@reply = Reply.new(params[:reply])
+    @reply.user = current_user
+    @reply.post = Post.find(params[:post_id])
 
-  	if @post.save
-  		redirect_to show_post_path, notice: 'Resposta criada com suceso.'
+  	if @reply.save
+  		redirect_to post_path(@reply.post), notice: t("flash.notice.reply_success")
   	else
-  		redirect_to new_reply_path, alert: 'Ocorreu um erro ao salvar a resposta.'
+  		redirect_to post_path(@reply.post), alert: t("flash.alert.empty_reply")
   	end
 
   end
