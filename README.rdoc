@@ -1,4 +1,4 @@
-## Forum Uniara
-# Aplicativo desenvolvido para a Semana da Computação - Uniara 2013
+= Forum Uniara
+== Aplicativo desenvolvido para a semana da computação 2013 - Uniara
 
-[![Code Climate](https://codeclimate.com/github/devsinaction/uniara_forum.png)](https://codeclimate.com/github/devsinaction/uniara_forum)
+{<img src="https://codeclimate.com/github/devsinaction/uniara_forum.png" />}[https://codeclimate.com/github/devsinaction/uniara_forum]
