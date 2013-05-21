@@ -11,7 +11,38 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130520225148) do
+ActiveRecord::Schema.define(:version => 20130521004418) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "categories", ["title"], :name => "index_categories_on_title"
+
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "user_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "posts", ["category_id"], :name => "index_posts_on_category_id"
+  add_index "posts", ["user_id"], :name => "index_posts_on_user_id"
+
+  create_table "replies", :force => true do |t|
+    t.string   "content"
+    t.integer  "post_id"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "replies", ["post_id"], :name => "index_replies_on_post_id"
+  add_index "replies", ["user_id"], :name => "index_replies_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name",                                   :null => false
