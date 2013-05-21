@@ -11,8 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20130521004418) do
+ActiveRecord::Schema.define(:version => 20130521005932) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -44,9 +43,6 @@ ActiveRecord::Schema.define(:version => 20130521004418) do
 
   add_index "replies", ["post_id"], :name => "index_replies_on_post_id"
   add_index "replies", ["user_id"], :name => "index_replies_on_user_id"
-=======
-ActiveRecord::Schema.define(:version => 20130521005932) do
->>>>>>> 36f1e7f2484d859c31b9ca706ce56cb96e04d0b2
 
   create_table "users", :force => true do |t|
     t.string   "name",                                   :null => false
