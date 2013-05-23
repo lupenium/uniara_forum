@@ -4,4 +4,5 @@ pt-BR:
     sign_in: "Entrar"
     logout: "Sair"
     posts: "Tópicos"
+    categories: "Categorias"
     new_post: "Novo Tópico"

@@ -6,6 +6,10 @@ pt-BR:
         updated_at: "Atualizado em"
         title: Título
         content: Conteúdo
+        user: Usuário
+        user_id: Usuário
+        category: Categoria
+        category_id: Categoria
       user:
         <<: *names_defaults
         name: "Nome"
@@ -17,7 +21,12 @@ pt-BR:
         <<: *names_defaults
       post:
         <<: *names_defaults
-        category: Categoria
+        replies: Respostas
+        reply: Resposta
+      reply:
+        <<: *names_defaults
+        content: Resposta
+
     models:
       category: Categoria
       post: Tópico

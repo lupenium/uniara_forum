@@ -8,6 +8,16 @@
   <dd><%= @category.title %></dd>
 </dl>
 
+<h4><%= t("labels.posts_in_category") %></h4>
+<dl class="dl-horizontal">
+  <dt><%= Post.human_attribute_name(:title) %></dt>
+  <dd><%= Post.human_attribute_name(:replies) %></dd>
+  <% @posts.each do |post| %>
+      <dt> <%= link_to post.title, post_path(post) %> </dt>
+      <dd> <%= post.replies.size %> </dd>
+  <%end%>
+</dl>
+
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               categories_path, :class => 'btn'  %>
