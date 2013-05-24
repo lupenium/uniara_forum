@@ -1,20 +1,15 @@
 defaults: &defaults
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
+  adapter: sqlite3
   pool: 5
-  username: root
-  password:
-  host: localhost
-
+  timeout: 5000
 development:
-  <<: *defaults
-  database: uniara_forum_development
+  <<: *defaults  
+  database: db/development.sqlite3
 
 test:
   <<: *defaults
-  database: uniara_forum_test
+  database: db/test.sqlite3
 
 production:
   <<: *defaults
-  database: uniara_forum_production
+  database: db/production.sqlite3
