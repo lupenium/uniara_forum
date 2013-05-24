@@ -9,7 +9,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.with_replies(params[:id])
+    #@post = Post.find(params[:id])
     @reply = Reply.new
     @reply.user = current_user
   end

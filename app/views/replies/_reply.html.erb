@@ -1,5 +1,11 @@
-<tr>
-  <td><%= reply.content %></td>
-  <td><%= reply.user.name %></td>
-  <td><%=l reply.created_at %></td>        
-</tr>
+<hr>
+<article class="reply">
+  <p>
+    <%= link_to_profile(reply.user) %>
+  </p>
+  <span class="reply_content">
+    <%= reply.content %>
+  </span>
+</article>
+
+<hr>

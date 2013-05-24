@@ -12,7 +12,8 @@
   <dd><%= raw @post.content %></dd>
 </dl>
 
-<%= render "post_replies", replies: @post.replies %>
+<!-- <%= render "post_replies", replies: @post.replies %> -->
+<%= render @post.replies %>
 
 <%= simple_form_for [@post, @reply] do |f| %>
   <%= f.input :content %>

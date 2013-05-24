@@ -8,5 +8,9 @@ class Post < ActiveRecord::Base
 
   validates_presence_of :category, :user, :title, :content
 
-  scope :recents, -> { order("created_at DESC") }
+  scope :recents, -> { order("created_at DESC") }  
+
+  def self.with_replies(post_id)
+    self.includes(:replies).order("replies.created_at DESC").find(post_id)
+  end
 end
